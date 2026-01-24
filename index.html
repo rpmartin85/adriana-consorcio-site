@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adriana Consórcio | Simule e fale no WhatsApp</title>
+  <meta name="description" content="Simule seu consórcio sem compromisso e fale com um especialista no WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon padrão -->
+<link rel="icon" href="assets/favicon.ico">
+
+<!-- PNGs -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+<!-- Apple (iPhone / iPad) -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+</head>
+
+<body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <img
+          src="logoAC.png"
+          alt="Adriana Consórcio"
+          class="brand-logo"
+        />
+      </div>
+
+      <nav class="nav">
+        <a href="#planos">Planos</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+
+      <a class="btn btn--ghost" href="#simulacao">Simular agora</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <span class="pill">Simulação online • Atendimento no WhatsApp</span>
+          <h1>Consórcio do seu jeito: simule em 1 minuto e fale com um especialista</h1>
+          <p class="lead">
+            Escolha o tipo de consórcio, informe o valor do crédito e receba uma proposta sob medida
+            direto no WhatsApp.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#simulacao">Fazer simulação</a>
+            <button class="btn btn--secondary" id="ctaWhats">Falar no WhatsApp</button>
+          </div>
+
+          <div class="trust">
+            <div class="trust__item">
+              <strong>Sem juros</strong>
+              <span>Você paga taxa adm.</span>
+            </div>
+            <div class="trust__item">
+              <strong>Sem entrada</strong>
+              <span>Comece planejando</span>
+            </div>
+            <div class="trust__item">
+              <strong>Flexível</strong>
+              <span>Planos e prazos</span>
+            </div>
+
+
+
+          </div>
+<div style="height:80px;"></div>
+
+<!-- Carrossel de destaque (1 imagem por vez) -->
+<div class="heroCarousel" aria-label="Carrossel de imagens">
+  <button class="heroCarBtn" type="button" id="heroPrev" aria-label="Anterior">‹</button>
+
+  <div class="heroViewport">
+    <div class="heroTrack" id="heroTrack">
+      <img class="heroSlide"
+           src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1400&q=80"
+           alt="Consórcio de Imóveis">
+
+      <img class="heroSlide"
+           src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1400&q=80"
+           alt="Consórcio de Carros">
+
+      <img class="heroSlide"
+           src="https://images.unsplash.com/photo-1635174815469-6efd052297d4?auto=format&fit=crop&w=1400&q=80"
+           alt="Consórcio de Maquinário">
+
+      <img class="heroSlide"
+           src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1400&q=80"
+           alt="Consórcio Náutico">
+    </div>
+  </div>
+
+  <button class="heroCarBtn" type="button" id="heroNext" aria-label="Próximo">›</button>
+
+  <div class="heroDots" id="heroDots" aria-label="Paginação do carrossel"></div>
+</div>
+
+
+
+        </div>
+
+
+
+        <!-- Form card -->
+        <aside class="card" id="simulacao">
+          <h2>Insira seus dados para finalizar a simulação</h2>
+          <p class="muted">Você será atendido no WhatsApp.</p>
+
+          <form id="leadForm">
+            <div class="grid2">
+              <label>
+                Nome*
+                <input name="nome" type="text" placeholder="Seu nome" required />
+              </label>
+              <label>
+                WhatsApp*
+                <input name="whatsapp" type="tel" placeholder="(11) 99999-9999" required />
+              </label>
+            </div>
+
+            <label>
+              E-mail
+              <input name="email" type="email" placeholder="voce@exemplo.com" />
+            </label>
+
+            <div class="grid2">
+  <label>
+    Tipo de consórcio*
+    <select name="tipo" required>
+      <option value="" selected disabled>Selecione</option>
+      <option>Imóvel</option>
+      <option>Carro</option>
+      <option>Moto</option>
+      <option>Serviços</option>
+      <option>Outros</option>
+      <option>Maquinário</option>
+      <option>Náutico</option>
+      <option>Aeronaves</option>
+    </select>
+  </label>
+
+  <label>
+    UF*
+    <select name="uf" id="uf" required>
+      <option value="" selected disabled>Selecione</option>
+    </select>
+  </label>
+</div>
+
+<label>
+  Município*
+  <input name="cidade" id="cidade" type="text" placeholder="Digite para buscar…" list="municipiosList" required />
+  <datalist id="municipiosList"></datalist>
+</label>
+
+            <label>
+              Valor do crédito desejado (R$)*
+              <input name="credito" id="credito" type="range" min="10000" max="5000000" step="5000" value="120000" />
+              <div class="rangeRow">
+                <span class="muted">10.000</span>
+                <strong id="creditoLabel">120.000</strong>
+                <span class="muted">5.000.000</span>
+              </div>
+            </label>
+
+            <div class="grid2">
+              <label>
+                Parcela ideal (R$)
+                <input name="parcela" type="text" inputmode="numeric" placeholder="Ex: 950" />
+              </label>
+              <label>
+                Melhor horário
+                <select name="horario">
+                  <option value="">Sem preferência</option>
+                  <option>Manhã</option>
+                  <option>Tarde</option>
+                  <option>Noite</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="consent">
+              <input name="lgpd" type="checkbox" required />
+              Li e aceito a <a href="#politica">Política de Privacidade</a> e autorizo contato via WhatsApp.
+            </label>
+
+            <button class="btn btn--full" type="submit">
+              Simular agora no WhatsApp
+            </button>
+
+            <p class="tiny muted">
+              *Ao enviar, você abre uma conversa no WhatsApp com seus dados preenchidos.
+            </p>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Planos -->
+    <section class="section" id="planos">
+      <div class="container">
+        <h2>Nossos planos</h2>
+        <p class="muted">Selecione a categoria e receba uma simulação personalizada.</p>
+
+
+<div class="carousel" aria-label="Carrossel de planos">
+  <button class="carBtn" type="button" id="plansPrev" aria-label="Anterior">‹</button>
+
+  <div class="viewport" id="plansViewport">
+    <div class="track" id="plansTrack">
+  <!-- Imóveis -->
+  <article class="miniCard">
+    <img class="planImg"
+         src="https://images.unsplash.com/photo-1568605114967-8130f3a36994"
+         alt="Consórcio de Imóveis">
+    <h3>Consórcio de Imóveis</h3>
+    <p>Casa, apartamento, terreno, construção e reforma.</p>
+    <a class="link" href="#simulacao" data-tipo="Imóvel">Simular</a>
+  </article>
+
+  <!-- Carros -->
+  <article class="miniCard">
+    <img class="planImg"
+         src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+         alt="Consórcio de Carros">
+    <h3>Consórcio de Carros</h3>
+    <p>Veículos novos ou seminovos com planejamento.</p>
+    <a class="link" href="#simulacao" data-tipo="Carro">Simular</a>
+  </article>
+
+  <!-- Motos -->
+  <article class="miniCard">
+    <img class="planImg"
+         src="https://images.unsplash.com/photo-1635073908681-b4dfbd6015e8"
+         alt="Consórcio de Motos">
+    <h3>Consórcio de Motos</h3>
+    <p>Mobilidade, lazer ou trabalho.</p>
+    <a class="link" href="#simulacao" data-tipo="Moto">Simular</a>
+  </article>
+
+  <!-- Outros / Viagem -->
+  <article class="miniCard">
+    <img class="planImg"
+         src="https://images.unsplash.com/photo-1488085061387-422e29b40080"
+         alt="Consórcio de Serviços e Viagens">
+    <h3>Consórcio de Serviços</h3>
+    <p>Viagens, intercambio, cirurgias, casamento e mais.</p>
+    <a class="link" href="#simulacao" data-tipo="Serviços">Simular</a>
+  </article>
+
+
+<article class="miniCard">
+  <img class="planImg"
+       src="https://images.unsplash.com/photo-1635174815469-6efd052297d4?auto=format&fit=crop&w=800&q=80"
+       alt="Consórcio de Maquinário">
+  <h3>Maquinário</h3>
+  <p>Equipamentos, tratores e máquinas para trabalho.</p>
+  <a class="link" href="#simulacao" data-tipo="Maquinário">Simular</a>
+</article>
+
+
+<article class="miniCard">
+  <img class="planImg"
+       src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=800&q=80"
+       alt="Consórcio Náutico">
+  <h3>Náutico</h3>
+  <p>Lanchas, jets e embarcações para lazer.</p>
+  <a class="link" href="#simulacao" data-tipo="Náutico">Simular</a>
+</article>
+
+
+<article class="miniCard">
+  <img class="planImg"
+       src="https://images.unsplash.com/photo-1583169327375-a5078762c09c?auto=format&fit=crop&w=800&q=80"
+       alt="Consórcio de Aeronaves">
+  <h3>Aeronaves</h3>
+  <p>Planejamento para aviação e projetos especiais.</p>
+  <a class="link" href="#simulacao" data-tipo="Aeronaves">Simular</a>
+</article>
+
+</div>
+  </div>
+
+  <button class="carBtn" type="button" id="plansNext" aria-label="Próximo">›</button>
+</div>
+
+<div style="height:80px;"></div>
+
+
+    <!-- Benefícios -->
+    <section class="section section--alt" id="beneficios">
+      <div class="container">
+        <h2>Benefícios do consórcio</h2>
+        <div class="bullets">
+          <div class="bullet"><strong>Sem juros</strong><span>Você não paga juros como no financiamento.</span></div>
+          <div class="bullet"><strong>Sem entrada</strong><span>Comece com parcelas planejadas.</span></div>
+          <div class="bullet"><strong>Planos flexíveis</strong><span>Escolha prazos e valores de crédito.</span></div>
+          <div class="bullet"><strong>Menos burocracia</strong><span>Processo simplificado e orientação.</span></div>
+          <div class="bullet"><strong>Lances e sorteios</strong><span>Formas de contemplação para acelerar.</span></div>
+          <div class="bullet"><strong>Atendimento no WhatsApp</strong><span>Fale direto com um consultor.</span></div>
+        </div>
+        <p class="tiny muted">
+          Observação: as condições variam conforme administradora/grupo e perfil. Este site é um modelo de captação de leads.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>Dúvidas frequentes</h2>
+        <div class="faq">
+          <details>
+            <summary>Em quanto tempo sou contemplado?</summary>
+            <p>Depende de sorteio e/ou lance. O consultor explica estratégias e regras do grupo.</p>
+          </details>
+          <details>
+            <summary>Consórcio tem juros?</summary>
+            <p>Em geral não há juros, mas há taxa de administração e possíveis fundos previstos em contrato.</p>
+          </details>
+          <details>
+            <summary>Posso usar o crédito para comprar usado?</summary>
+            <p>Normalmente sim (veículos/imóveis), respeitando regras do plano e documentação.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Política / LGPD -->
+    <section class="section section--alt" id="politica">
+      <div class="container">
+        <h2>Política de Privacidade (resumo)</h2>
+        <p class="muted">
+          Coletamos seus dados para retornar seu contato e enviar a simulação solicitada. Você pode solicitar
+          remoção/alteração dos dados a qualquer momento.
+        </p>
+        <p class="tiny muted">
+          (Substitua este texto por uma política completa conforme LGPD e seu fluxo real de dados.)
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span>© <span id="year"></span> Adriana Consórcio</span>
+        <span class="muted">Atendimento via WhatsApp • LGPD</span>
+      </div>
+    </footer>
+  </main>
+
+  <!-- WhatsApp floating button -->
+ <a class="waFloat" id="waFloat" href="#" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 448 512" aria-hidden="true">
+    <path fill="currentColor"
+      d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 438.7h-.1c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.2-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.7-186.5 184.7zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.7 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.3-5-3.7-10.5-6.5z"/>
+  </svg>
+</a>
+
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>
