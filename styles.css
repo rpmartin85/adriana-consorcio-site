@@ -732,7 +732,7 @@ textarea:focus{
 .heroSlide{
   flex: 0 0 100% !important;
   width: 100% !important;
-  height: 260px;         /* altura fixa pra não “estourar” */
+  height: 413px;         /* altura fixa pra não “estourar” */
   object-fit: cover;
   display: block;
 }
