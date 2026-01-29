@@ -788,7 +788,7 @@ textarea:focus{
 }
 
 @media (max-width: 520px){
-  .heroSlide{ height: 210px; }
+  .heroSlide{ height: 310px; }
   .heroCarousel{ max-width: 100%; }
 }
 
@@ -804,6 +804,6 @@ textarea:focus{
 /* Mobile: um pouco menor */
 @media (max-width: 520px){
   .brand-logo{
-    height: 34px;
+    height: 50px;
   }
 }
