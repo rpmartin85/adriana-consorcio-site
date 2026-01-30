@@ -284,7 +284,7 @@ input::placeholder{color: rgba(169,183,214,.7)}
 .footer{padding:18px 0}
 .footer__inner{
   display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
-  color: var(--muted);
+  color: var(--accent2);
   border-top:1px solid var(--line);
   padding-top:14px;
 }
@@ -833,4 +833,54 @@ textarea:focus{
 .heroSlide {
   display: block !important;
   flex-grow: 0 !important;
+}
+
+.footer {
+  padding: 50px 0 30px;
+}
+
+.footer__certifications {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cert-title {
+  font-size: 21px; 
+  color: var(--accent2);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+}
+
+.cert-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Logos com 50% de aumento e tom de azul sutil */
+.cert-logos img {
+  height: 50px; 
+  width: auto;
+  /* Cria um efeito azulado sutil nos logos antes do hover */
+  filter: sepia(100%) hue-rotate(190deg) saturate(200%) brightness(0.8) opacity(0.6);
+  transition: all 0.4s ease;
+}
+
+/* No hover, o logo volta à cor original e ganha destaque */
+.cert-logos img:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media (max-width: 520px) {
+  .cert-logos {
+    gap: 35px;
+    flex-direction: column; /* Empilha no mobile para logos grandes */
+  }
+  .cert-logos img {
+    height: 65px; /* Ajuste leve para telas pequenas */
+  }
 }
